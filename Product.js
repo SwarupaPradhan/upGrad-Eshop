@@ -73,6 +73,8 @@ export const Product = () => {
           <Box sx={{ flexGrow: 1 }} />
           <Button id='link' color='inherit' component={Link} to={"/"}>Home</Button>
           <Box sx={{ flexGrow: 0.1 }} />
+          <Button id='link' color='inherit' component={Link} to={"/Product"}>Add Product</Button>
+          <Box sx={{ flexGrow: 0.1 }} />
           <Button variant='contained' id='Button'  component={Link} to={"/Logout"}>Logout</Button>
         </Toolbar>
     </AppBar>
