@@ -1,10 +1,12 @@
 import React from 'react'
-import { AppBar, Toolbar, IconButton, Typography, Button, Box, InputBase } from '@mui/material'
+import { AppBar, Toolbar, IconButton, Typography, Button, Box, InputBase, Card,CardActions,CardContent, CardMedia } from '@mui/material'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'
 import SearchIcon from '@mui/icons-material/Search'
 import { styled, alpha } from '@mui/material/styles';
 import {Link} from 'react-router-dom'
 import './Product.css'
+import imgShoe from './BlueShoe.jpg';
+
 
 
 export const Product = () => {
@@ -51,6 +53,7 @@ export const Product = () => {
   }));
 
   return (
+    <>
     <nav>
     <AppBar position='static' style={{ background: '#3f51b5' }}>
         <Toolbar>
@@ -79,5 +82,36 @@ export const Product = () => {
         </Toolbar>
     </AppBar>
     </nav>
+  
+
+  <div style={{margin: '25%'}}>
+    <Card sx={{ maxWidth: 300 }}>
+      <CardMedia
+        component="img"
+        height="230"
+        src={imgShoe}
+        alt="BlueShoe"
+      />
+      <CardContent>
+        <Box display='flex'>
+          <Typography variant='h6' component='div' display={'flex'} >
+              BlueShoe
+           </Typography>
+           <Box sx={{ flexGrow: .8 }} />
+           <Typography variant='h6' component='div'  >
+              1000Rs
+           </Typography>
+        </Box>  
+        <Typography variant="body2" color="text.secondary">
+        Running Shoes Breathable Trainers Lace-Up Sports Shoes Trainers for Men Women.
+        </Typography>
+      </CardContent>
+      <CardActions>
+        <Button variant='contained' backgroundColor= '#7307f7' size="small">Buy</Button>
+      </CardActions>
+    </Card>
+    </div>
+    </>
   )
+
 } 
